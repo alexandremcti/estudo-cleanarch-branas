@@ -1,0 +1,20 @@
+{
+  "name": "estudo-cleanarch-branas",
+  "version": "1.0.0",
+  "description": "Sistema criado para exercitar conceitos aprendidos no curso de clean architecture do Rodrigo Branas.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandremcti/estudo-cleanarch-branas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexandremcti/estudo-cleanarch-branas/issues"
+  },
+  "homepage": "https://github.com/alexandremcti/estudo-cleanarch-branas#readme"
+}
