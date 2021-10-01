@@ -4,7 +4,7 @@
   "description": "Sistema criado para exercitar conceitos aprendidos no curso de clean architecture do Rodrigo Branas.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/alexandremcti/estudo-cleanarch-branas/issues"
   },
-  "homepage": "https://github.com/alexandremcti/estudo-cleanarch-branas#readme"
+  "homepage": "https://github.com/alexandremcti/estudo-cleanarch-branas#readme",
+  "devDependencies": {
+    "jest": "^27.2.1",
+    "sinon": "^11.1.2"
+  }
 }
