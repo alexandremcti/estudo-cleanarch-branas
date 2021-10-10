@@ -53,7 +53,7 @@ class Cpf {
 
     extractCheckDigit(cpf) {
         return cpf.slice(9)
-    } W
+    }
 }
 
 module.exports = Cpf

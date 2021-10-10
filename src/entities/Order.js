@@ -26,6 +26,7 @@ class Order {
     }
 
     setDiscount(coupon) {
+        if (!coupon.isValid()) throw new Error('Coupon expirated')
         this.coupon = coupon;
     }
 }
