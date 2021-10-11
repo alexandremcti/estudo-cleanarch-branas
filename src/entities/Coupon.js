@@ -6,9 +6,9 @@ class Coupon {
         Object.freeze(this);
     }
 
-    isValid() {
-        const todayDate = new Date();
-        return (this.expirationDate > todayDate) ? true : false
+    isValid(today = new Date()) {
+        if (!this.expirationDate) return false
+        return (this.expirationDate > today)
     }
 
 }

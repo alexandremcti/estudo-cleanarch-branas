@@ -15,21 +15,17 @@ describe('Coupon', () => {
 
     it('should verify if a coupon is valid', () => {
         const now = new Date(2021, 9, 10);
-        sandBox.useFakeTimers(now.getTime());
-
         const date = new Date(2021, 12, 2);
         const coupon = new Coupon({ code: "VALE20", discount: 20, expirationDate: date });
-        const isCouponValid = coupon.isValid();
+        const isCouponValid = coupon.isValid(now);
         expect(isCouponValid).toBeTruthy();
     })
 
     it('should verify if a coupon is invalid', () => {
         const now = new Date(2021, 9, 10);
-        sandBox.useFakeTimers(now.getTime());
-
         const date = new Date(2021, 8, 2);
         const coupon = new Coupon({ code: "VALE20", discount: 20, expirationDate: date });
-        const isCouponInvalid = coupon.isValid();
+        const isCouponInvalid = coupon.isValid(now);
         expect(isCouponInvalid).toBeFalsy();
     })
 })

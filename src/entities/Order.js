@@ -3,10 +3,11 @@ const OrderItem = require("./OrderItem");
 
 class Order {
 
-    constructor(cpf) {
+    constructor(cpf, issueDate = new Date()) {
         this.cpf = new Cpf(cpf);
         this.orderItems = [];
         this.coupon = undefined;
+        this.issueDate = issueDate;
     }
 
     add({ item, quantity }) {
@@ -26,7 +27,7 @@ class Order {
     }
 
     setDiscount(coupon) {
-        if (!coupon.isValid()) throw new Error('Coupon expirated')
+        if (!coupon.isValid(this.issueDate)) throw new Error('Coupon expirated')
         this.coupon = coupon;
     }
 }
