@@ -3,6 +3,7 @@ class Cpf {
     constructor(value) {
         if (!this.validate(value)) throw new Error('invalid cpf');
         this.value = value;
+        Object.freeze(this);
     }
 
     get CPF_VALID_LENGTH() {

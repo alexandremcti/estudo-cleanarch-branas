@@ -1,7 +1,7 @@
-const Cpf = require("../src/entities/Cpf");
-const Order = require("../src/entities/Order");
-const Item = require("../src/entities/Item");
-const Coupon = require("../src/entities/Coupon");
+const Cpf = require("../../src/entities/Cpf");
+const Order = require("../../src/entities/Order");
+const Item = require("../../src/entities/Item");
+const Coupon = require("../../src/entities/Coupon");
 
 
 

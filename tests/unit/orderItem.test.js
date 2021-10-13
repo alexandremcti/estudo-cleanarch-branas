@@ -1,5 +1,5 @@
 const sinon = require("sinon");
-const OrderItem = require("../src/entities/OrderItem");
+const OrderItem = require("../../src/entities/OrderItem");
 
 describe('Order Item', () => {
     it('should be able return total of a order item', () => {

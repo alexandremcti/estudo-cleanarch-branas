@@ -1,4 +1,4 @@
-const Item = require("../src/entities/Item");
+const Item = require("../../src/entities/Item");
 
 describe('Item', () => {
     it('should be able create a item', () => {
