@@ -1,5 +1,5 @@
 const sinon = require("sinon");
-const Cpf = require("../../src/entities/Cpf");
+const Cpf = require("../../src/domain/entities/Cpf");
 
 describe('Cpf validator', () => {
     it('shoud be validate a valid cpf', () => {

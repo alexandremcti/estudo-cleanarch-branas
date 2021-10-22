@@ -30,6 +30,10 @@ class Order {
         if (!coupon.isValid(this.issueDate)) throw new Error('Coupon expirated')
         this.coupon = coupon;
     }
+
+    getOrderItens() {
+        return this.orderItems.slice();
+    }
 }
 
 module.exports = Order

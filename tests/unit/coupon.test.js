@@ -1,5 +1,5 @@
 const sinon = require('sinon');
-const Coupon = require("../../src/entities/Coupon");
+const Coupon = require("../../src/domain/entities/Coupon");
 
 
 

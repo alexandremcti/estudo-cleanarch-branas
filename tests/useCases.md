@@ -15,6 +15,5 @@ Implementar um mecanismo de persistência desacoplado utilizando banco de dados
 
 Importante
 
-
 Implemente os testes de unidade que faltam para cada uma das entities
 Implemente os DTOs para cada um dos use cases

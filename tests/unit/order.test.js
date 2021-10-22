@@ -1,7 +1,7 @@
-const Cpf = require("../../src/entities/Cpf");
-const Order = require("../../src/entities/Order");
-const Item = require("../../src/entities/Item");
-const Coupon = require("../../src/entities/Coupon");
+const Cpf = require("../../src/domain/entities/Cpf");
+const Order = require("../../src/domain/entities/Order");
+const Item = require("../../src/domain/entities/Item");
+const Coupon = require("../../src/domain/entities/Coupon");
 
 
 
@@ -71,6 +71,24 @@ describe('Purchase Order', () => {
             }))).toThrowError('Coupon expirated')
     })
 
-    // Deve calcular o valor do frete com base nas dimensões
-    //it('should calculate shipping tax on dimensions based', () => {})
+    it('should return orderItens', () => {
+        const order = new Order('421.989.730-57', new Date());
+        const item1 = new Item({ idItem: 1, description: 'PS5', price: 4000, category: 'eletronics' });
+        const item2 = new Item({ idItem: 2, description: 'Final Fantasy 7 Remake', price: 200, category: 'eletronics' });
+        const item3 = new Item({ idItem: 3, description: 'PS5 joystick', price: 400, category: 'eletronics' });
+        order.add({
+            item: item1,
+            quantity: 1
+        });
+        order.add({
+            item: item2,
+            quantity: 1
+        });
+        order.add({
+            item: item3,
+            quantity: 1
+        });
+        const orderItens = order.getOrderItens();
+        expect(orderItens).toHaveLength(3);
+    })
 })

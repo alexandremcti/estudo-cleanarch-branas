@@ -1,4 +1,4 @@
-const OrderCode = require('../../src/entities/OrderCode');
+const OrderCode = require('../../src/domain/entities/OrderCode');
 
 describe('Order Code', () => {
     it('should create a order code', () => {
