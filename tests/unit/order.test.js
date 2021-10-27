@@ -91,4 +91,25 @@ describe('Purchase Order', () => {
         const orderItens = order.getOrderItens();
         expect(orderItens).toHaveLength(3);
     })
+
+    it('should generate the order Code', () => {
+        const order = new Order('421.989.730-57', new Date(), 1);
+        const item1 = new Item({ idItem: 1, description: 'PS5', price: 4000, category: 'eletronics' });
+        const item2 = new Item({ idItem: 2, description: 'Final Fantasy 7 Remake', price: 200, category: 'eletronics' });
+        const item3 = new Item({ idItem: 3, description: 'PS5 joystick', price: 400, category: 'eletronics' });
+        order.add({
+            item: item1,
+            quantity: 1
+        });
+        order.add({
+            item: item2,
+            quantity: 1
+        });
+        order.add({
+            item: item3,
+            quantity: 1
+        });
+        const orderCode = order.getOrderCode();
+        expect(orderCode).toBe("202100000001");
+    })
 })

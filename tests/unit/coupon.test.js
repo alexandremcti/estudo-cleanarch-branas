@@ -1,18 +1,6 @@
-const sinon = require('sinon');
 const Coupon = require("../../src/domain/entities/Coupon");
 
-
-
-
 describe('Coupon', () => {
-    beforeEach(() => {
-        sandBox = sinon.createSandbox();
-    })
-
-    afterEach(() => {
-        sandBox.restore()
-    })
-
     it('should verify if a coupon is valid', () => {
         const now = new Date(2021, 9, 10);
         const date = new Date(2021, 12, 2);
