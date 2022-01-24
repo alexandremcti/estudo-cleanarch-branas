@@ -19,10 +19,6 @@ class Item {
         return this.weight / this.getVolume()
     }
 
-    getFreight() {
-        const freight = 1000 * this.getVolume() * (this.getDensity() / 100);
-        return (freight > 10) ? freight : 10
-    }
 }
 
 module.exports = Item
